@@ -1,0 +1,106 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<script
+  src="https://code.jquery.com/jquery-3.3.1.slim.js"
+  integrity="sha256-fNXJFIlca05BIO2Y5zh1xrShK3ME+/lYZ0j+ChxX2DA="
+  crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+   
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+
+
+    
+   
+    <div class= "container" >
+
+        <div class="navbar bg-dark" style="width: 10cm;">
+            <div class="btn-group dropleft">
+                <button type="button" class="btn btn-secondary dropdown-toggle btn-danger" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
+                    <i class="fas fa-clock"></i>
+                </button>
+                <div class="dropdown-menu p-4 text-white bg-dark " style="width: 10cm; height: 15.4cm;margin-right: 0.39cm;">
+                  {{k}}
+                  <p style="white-space: pre-wrap">
+                      {{z}}
+                  </p>
+                </div>
+              </div>
+          </div>
+       <div class="border bg-danger border-dark" style="height:3.5cm; width : 10cm; margin-bottom: -2px;font-weight: bold ">
+        <div class = "row" style="padding-left: 0.4cm" >            
+            <p style="font-size: 30px">{{y}}</p>
+        </div> 
+        <div class ="row" style="padding-left: 0.4cm">               
+            <p style="font-size: 35px;  ">{{x}}</p> 
+            <p style="font-size: 35px; ">{{contr}}</p>  
+            <p style="font-size: 35px; margin-top: 0.7cm;">{{sum}}</p>           
+    </div>          
+     </div>
+      <div class ="border bg-black border-danger" style="width: 10cm;height: 10cm;">              
+      <div class ="row" style="padding-left: 0.4cm">
+        <div class="col-xs">
+          <div class="btn-group" aria-label="Justified button group">
+              <input  type ="button" class="btn btn-dark btn-lg border border-danger rounded-0 " data-toggle="tooltip" title="Get Past to Navigation Bar" (click)="getPast()" data-placement value="M" > 
+              <input  type="button" class="btn btn-dark btn-lg border border-danger rounded-0" (click)="makeDivided()" value="⅟x">
+              <input  type="button" class="btn btn-dark btn-lg border border-danger rounded-0" (click)="root()" value="√">
+              <input  type="button" class="btn btn-dark btn-lg border border-danger rounded-0" (click)="square()"  value="a²">
+          </div>          
+        </div>             
+      </div>
+      <div class="row" style="padding-left: 0.4cm">
+          <div class="col-xs">
+            <div class="btn-group">
+                <input  type="button" class="btn btn-dark btn-lg border border-danger rounded-0 border-top-0" (click)="clear()" value="CE"> 
+                <input  type="button" class="btn btn-dark btn-lg border border-danger rounded-0 border-top-0" (click)="clearAll()" value="C">
+                <input  type="button" class="btn btn-dark btn-lg border border-danger rounded-0 border-top-0"  (click)="delete()" value="←">
+                <input  type="button" class="btn btn-dark btn-lg border border-danger rounded-0 border-top-0"  (click)="division()" value="/"> 
+            </div>          
+          </div>
+        </div>
+      <div class ="row" style="padding-left: 0.4cm">
+        <div class="btn-group btn-group-justified" role="group" aria-label="Justified button group">
+            <div class = "col-xs">
+                <div class="btn-group">
+                    <button type="button" class="btn btn-danger btn-lg border border-dark rounded-0 border-top-0" (click)="getValue('1')"> 1 </button>
+                    <button type="button" class="btn btn-danger btn-lg border border-dark rounded-0 border-top-0" (click)="getValue('2')"> 2 </button> 
+                    <button type="button" class="btn btn-danger btn-lg border border-dark rounded-0 border-top-0" (click)="getValue('3')"> 3 </button> 
+                    <input  type="button" class="btn btn-dark btn-lg border border-danger rounded-0 border-top-0" (click)="add()"  value="+" >
+                  </div>            
+              </div>
+        </div>  
+      </div>
+      <div class = "row" style="padding-left: 0.4cm">
+        <div class = "btn-group btn-group-justified" role="group">
+            <div class = "col-xs">
+                <div class="btn-group">
+                    <button type="button" class="btn btn-danger btn-lg border border-dark rounded-0 border-top-0"  (click)="getValue('4')"> 4 </button>
+                    <button type="button" class="btn btn-danger btn-lg border border-dark rounded-0 border-top-0"  (click)="getValue('5')"> 5 </button>
+                    <button  type="button" class="btn btn-danger btn-lg border border-dark rounded-0 border-top-0" (click)="getValue('6')"> 6 </button>
+                    <input  type="button" class="btn btn-dark btn-lg border border-danger rounded-0 border-top-0" (click)="substract()"  value="-">
+                  </div>              
+              </div>
+        </div>    
+      </div>
+      <div class = "row" style="padding-left: 0.4cm">
+        <div class="btn-group" role="group">
+            <div class = "col-xs">
+                <div class="btn-group">
+                    <button  type="button" class="btn btn-danger btn-lg border border-dark rounded-0 border-top-0 " (click)="getValue('7')"> 7 </button>
+                    <button  type="button" class="btn btn-danger btn-lg border border-dark rounded-0 border-top-0 " (click)="getValue('8')"> 8 </button>
+                    <button type="button" class="btn btn-danger btn-lg border border-dark rounded-0 border-top-0" (click)="getValue('9')"> 9 </button>
+                    <input  type="button" class="btn btn-dark btn-lg border border-danger rounded-0 border-top-0" (click)="multiple()" value="*">
+                  </div>            
+              </div>
+        </div> 
+      </div>
+      <div class = "row" style="padding-left: 0.4cm">
+        <div class="col-xs">
+            <div class="btn-group">
+                <input  type="button" class="btn btn-dark border border-danger rounded-0 border-top-0" (click)="changeMark()" value="∓">  
+                <button  class="btn btn-danger border border-top-dark border-danger rounded-0 border-top-0" (click)="getValue('0')">0</button> 
+                <button class="btn btn-dark border border-danger rounded-0 border-top-0" (click)="addKama()" >,</button>
+                <input  class="btn btn-dark border border-danger rounded-0 border-top-0" type="button" (click)="total()" value="=">
+              </div>        
+        </div>
+      </div>     
+    </div>    
+  </div>

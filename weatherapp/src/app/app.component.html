@@ -1,0 +1,22 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<h1 class="text-white font-weight-bold" >Weather Find</h1>
+<label for="cityId"></label>
+<input size="40" type="text" id="cityId" name="cityId" class="btn btn-dark align-center border border-white" style="margin-left: 7.5cm;" placeholder="Enter City Name" [(ngModel)]="cityId" >
+<button type="submit" name="get" class="btn btn-dark border border-light font-weight-bold" (click)="getWeather()" (click) = "getWeather2()">Get Weather</button> <br>
+<div id="asc" *ngFor="let weather of weathers?.list" class="shadow figure border border-dark  text-white justify-content-center" style="margin-left: 0.2cm;   margin-top: 0.8cm">
+
+  <p class="col-sm font-weight-bold border-bottom border-dark" style="font-size: 1cm">{{weathers.city.name}} , {{weathers.city.country}} </p>
+  <p class="col-sm " style="font-size: 0.6cm">{{weather.dt_txt}}</p>
+  <p class="col-sm font-weight-bold text-center" style="font-size: 0.7cm;">{{weather.main.temp}} °C</p>
+  <p class="col-sm font-weight-bold text-center" style="font-size: 0.5cm" >{{weather.weather[0].main}}</p>
+  <img style="width: 1.2cm;margin-left: 2.8cm" src="https://openweathermap.org/img/w/{{weather.weather[0].icon}}.png"/>
+</div>
+
+<div id = 'asc' *ngFor="let weather2 of weathers2"   class="shadow figure border border-dark text-white justify-content-center" style="margin-left: 0.2cm;"  >
+    <p style="font-size : 5 cm" class="col-sm font-weight-bold text-center display-4">{{weather2?.location.name}}</p>
+    <p style="font-size : 4 cm" class="col-sm font-weight-bold text-center h2">{{weather2?.location.localtime}}</p>
+    <p style="font-size : 8 cm" class="col-sm font-weight-bold text-center h2">{{weather2?.location.region}}</p>
+    <p style="font-size : 4 cm" class="col-sm font-weight-bold text-center display-4">{{weather2?.current.temp_c}} °C </p>
+
+</div>
+

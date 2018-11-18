@@ -1,0 +1,16 @@
+/* You can add global styles to this file, and also import other style files */
+.container{    
+    max-width:500px;
+    margin: auto;
+}
+
+body{
+    background-image: url(bkc.jpg);
+}
+::-webkit-input-placeholder {
+    color: white;
+  }
+
+  #asc{
+      background-color: rgb(61, 61, 61);
+  }

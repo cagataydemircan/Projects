@@ -1,0 +1,28 @@
+button{
+    width: 95px;
+    height: 63px;
+}
+input{
+    width: 95px;
+    height: 63px;
+}
+
+border{
+    width: 10cm;
+}
+
+.container {
+ width: 100px;
+ height: 500px;
+ max-width: 100px;
+ margin:auto; 
+ padding-right: 10cm; 
+ padding-top: 4cm;
+}
+
+#pastes{
+
+}
+
+
+
